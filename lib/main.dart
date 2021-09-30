@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import './screens/meal_details_screen.dart';
 import './screens/categories_screen.dart';
 import './screens/category_meals_screen.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         // primarySwatch: Colors.pink,
         // accentColor: Colors.pinkAccent,
         colorScheme: ColorScheme.fromSwatch(
-          accentColor: Colors.pinkAccent,
+          accentColor: Colors.pinkAccent.shade400,
           primarySwatch: Colors.pink,
         ),
         canvasColor: const Color.fromRGBO(255, 254, 229, 1),
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/": (ctx) => const CategoriesScreen(),
         CategoryMealsScreen.routeName: (ctx) => const CategoryMealsScreen(),
+        MealDetailsScreen.routeName: (ctx) => const MealDetailsScreen(),
       },
       debugShowCheckedModeBanner: false,
     );
